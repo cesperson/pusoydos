@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Pusoy Dos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="home">    
+    <input type="button" class="button" value="Deal New Hand" onclick='reRun()' /><br /><br />
+    
+    <h1>Here's your hand</h1>
+    <div id="hand">
+    </div>
+    
+    <h1>Here's your straights</h1>
+    <div id="straights">
+    </div>
+    
+    <h1>Here's your flushes</h1>
+    <div id="flushes">
+    </div>
+    
+    <h1>Here's your flushes</h1>
+    <div id="pairs">
+    </div>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
