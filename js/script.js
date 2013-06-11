@@ -1,7 +1,7 @@
 var Card = function(number, suit) {
     var cardSuit = suit,
         cardNumber = number;
-
+    
     this.getSuit = function() {
         return cardSuit;
     };
@@ -61,7 +61,7 @@ var Hand = function(handDeck) {
         if (a[0] < b[0]) {
             return -1;
         }
-        if (a[0] > b[0]) {
+        if (a[0] > b[0]) { 
             return 1;
         }
         return 0;
@@ -137,12 +137,12 @@ var Hand = function(handDeck) {
 // 74 x 99, 950 x 392
 var DHTMLSprite = function(params) {
     var width = params.width;
-    height = params.height;
-    imagesWidth = params.imagesWidth,
+        height = params.height;
+        imagesWidth = params.imagesWidth,
         $element = params.$drawTarget.append('<div/>').find(':last'),
         elemStyle = $element[0].style,
         mathFloor = Math.floor;
-
+        
     $element.css({
         position: 'absolute',
         width: width,
@@ -180,11 +180,11 @@ var reRun = function() {
     document.getElementById("straights").innerHTML = "";
     document.getElementById("flushes").innerHTML = "";
     document.getElementById("pairs").innerHTML = "";
-
+    
     run();
 }
-
-var run = function() {
+    
+var run = function() {    
     var deck = new Deck();
     deck.shuffle();
     var hand = new Hand(deck),
@@ -193,8 +193,8 @@ var run = function() {
         divstraights = document.getElementById("straights"),
         divflushes = document.getElementById("flushes"),
         divpairs = document.getElementById("pairs");
-
-
+        
+    
     var params = {
         images: 'img/deck_sprites.png',
         imagesWidth: 936,
@@ -219,7 +219,7 @@ var run = function() {
         sprites[i-1].changeImage(hand.getHand()[i-1][0] + hand.getHand()[i-1][1] * 13);
         sprites[i-1].draw(0, 0);
     }
-
+    
     var straights = hand.getStraights();
 
     if (straights.length > 0) {
@@ -288,11 +288,11 @@ var run = function() {
             }
         }
     }
-    /*
-     for (i = 0; i < pairs.length; i++) {
-     divpairs.appendChild(document.createTextNode(pairs[i]));
-     }
-     */
+        /*
+    for (i = 0; i < pairs.length; i++) {
+        divpairs.appendChild(document.createTextNode(pairs[i]));
+    }
+    */
 
 };
 
